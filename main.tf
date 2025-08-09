@@ -4,7 +4,7 @@ resource "aws_launch_configuration" "web_server_as" {
     security_groups = [aws_security_group.web_server.id]
 }
   resource "aws_elb" "web_server_lb"{
-     name = "web-server-lb"
+     name = "web-lb"
      security_groups = [aws_security_group.web_server.id]
      subnets = [aws_subnet.mysubnet1.id,aws_subnet.mysubnet2.id]
      listener {
